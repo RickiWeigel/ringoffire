@@ -1,10 +1,61 @@
-.start-screen{
-    background-image: url('./../../assets/img/start-screen-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(50%);
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
+$color_font_white: rgb(187, 187, 187);
+
+@mixin dflex($jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin backgroundImg($br: no-repeat, $bs: cover, $bp: center) {
+  background-repeat: $br;
+  background-size: $bs;
+  background-position: $bp;
+}
+
+.start-screen {
+  @include dflex();
+  flex-direction: column;
+  background-image: url("./../../assets/img/start-screen-background.png");
+  @include backgroundImg();
+  filter: grayscale(50%);
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  > h1 {
+    color: $color_font_white;
+    font-size: clamp(36px, 10vw, 84px);
+  }
+}
+
+.headline {
+  position: absolute;
+  top: 30%;
+  text-shadow: 3px -5px 15px rgb(255, 123, 0);
+}
+
+.btn_start {
+  @include dflex();
+  position: absolute;
+  top: 40%;
+  background-image: url("./../../assets/img/btn_wood.png");
+  @include backgroundImg();
+  width: clamp(150px, 30vw, 300px);
+  height: clamp(40px, 7vw, 50px);
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+  }
+  
+}
+
+a{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    > span {
+    font-size: 21px;
+    font-weight: bold;
+    color: $color_font_white;
+  }
 }
