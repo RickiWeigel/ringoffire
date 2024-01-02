@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,4 +8,19 @@
 
 .font-medievalSharp{
     font-family: 'MedievalSharp', cursive;
+}
+
+$color_font_white: rgb(187, 187, 187);
+
+@mixin dflex($jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin backgroundImg($br: no-repeat, $bs: cover, $bp: center) {
+  background-repeat: $br;
+  background-size: $bs;
+  background-position: $bp;
 }
