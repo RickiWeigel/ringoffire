@@ -34,21 +34,26 @@
 
 .pick-card {
   animation: pick-card-animation 1.7s ease-in-out;
-  transform: scale(1.05) translateY(-340px) translatex(-80px) rotate(10deg);
+  transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
+  border: none!important;
 }
 
 @keyframes pick-card-animation {
-  0%{
+  0% {
+    border: none;
     filter: brightness(1);
     transform: scale(1.05) translateY(-7px) translatex(-5px);
   }
   40% {
+    border: none;
     transform: scale(1.25);
   }
-  50%{
+  50% {
+    border: none;
     transform: scale(1.25) translateY(-300px) translatex(-80px) rotate(10deg);
   }
-  100%{
-    transform: scale(1.05) translateY(-340px) translatex(-80px) rotate(10deg);
+  100% {
+    border: none;
+    transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
   }
 }
