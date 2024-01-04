@@ -1,5 +1,3 @@
-import { url } from "node:inspector";
-
 export class Game {
   public player: string[] = [];
   public stack: string[] = [];

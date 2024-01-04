@@ -14,8 +14,8 @@ import { Game } from '../models/game';
 })
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
-  game: Game | undefined;
-  currentCard: string | undefined = '';
+  game!: Game;
+  currentCard!: string;
 
   constructor() {}
 
@@ -29,14 +29,13 @@ export class GameComponent implements OnInit {
 
   takeCard() {
     if (!this.pickCardAnimation) {
-      this.currentCard = this.game?.stack.pop();
+      this.currentCard = this.game.stack.pop()!;
       console.log(this.currentCard);
       this.pickCardAnimation = true;
-      // this.game?.playedCards.push(this.currentCard);
-      console.log(this.game?.playedCards);
       setTimeout(() => {
+        this.game.playedCards.push(this.currentCard);
         this.pickCardAnimation = false;
-      }, 1500);
+      }, 1000);
     }
   }
 }
