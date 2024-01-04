@@ -2,7 +2,7 @@
 
 .game-screen {
   @include dflex();
-  background-image: url("./../../assets/img//background.png");
+  background-image: url("./../../assets/img/background.png");
   @include backgroundImg();
   width: 100vw;
   height: 100vh;
