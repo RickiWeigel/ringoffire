@@ -4,11 +4,12 @@ import { NgStyle } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { OnInit } from '@angular/core';
 import { Game } from '../models/game';
+import { PlayerComponent } from '../player/player.component';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [NgForOf, NgStyle, NgIf],
+  imports: [NgForOf, NgStyle, NgIf, PlayerComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss',
 })
@@ -30,7 +31,6 @@ export class GameComponent implements OnInit {
   takeCard() {
     if (!this.pickCardAnimation) {
       this.currentCard = this.game.stack.pop()!;
-      console.log(this.currentCard);
       this.pickCardAnimation = true;
       setTimeout(() => {
         this.game.playedCards.push(this.currentCard);
