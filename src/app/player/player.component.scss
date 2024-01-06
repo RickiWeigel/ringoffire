@@ -1,0 +1,29 @@
+@import "./../../styles.scss";
+
+.player-container {
+  width: 100%;
+  @include dflex($ai: flex-end, $g: 12px);
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+.player-shield {
+  @include dflex();
+  background-image: url("./../../assets/img/wood-shield.png");
+  @include backgroundImg();
+  width: clamp(120px, 20vw, 180px);
+  height: clamp(30px, 7vw, 50px);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50px;
+  > span {
+    color: rgb(128, 48, 48);
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 600;
+  }
+}
+
+.active-player {
+  filter: brightness(1.5);
+}
