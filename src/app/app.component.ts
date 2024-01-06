@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

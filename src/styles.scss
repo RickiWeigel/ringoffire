@@ -24,3 +24,5 @@ $color_font_white: rgb(187, 187, 187);
   background-size: $bs;
   background-position: $bp;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

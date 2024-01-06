@@ -1,15 +1,6 @@
 @import "./../../styles.scss";
 
-.player-container {
-  width: 100%;
-  @include dflex($ai: flex-end, $g: 12px);
-  flex-direction: column;
-  position: absolute;
-  top: 5%;
-  right: 0;
-}
-
-.player-shield {
+.player {
   @include dflex();
   background-image: url("./../../assets/img/wood-shield.png");
   @include backgroundImg();
