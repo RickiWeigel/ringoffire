@@ -15,7 +15,7 @@
   > img {
     position: absolute;
     border-radius: 10px;
-    border: 1px ridge $color_font_white;
+    border: 1px ridge rgb(68, 68, 68);
     width: clamp(150px, 15vw, 200px);
     height: clamp(250px, 22vw, 300px);
   }
@@ -30,22 +30,23 @@
 }
 
 .pick-card {
+  border: none !important;
   animation: pick-card-animation 1.5s ease-in-out;
   transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
 }
 
-.played-card{
+.played-card {
+  border: none !important;
   transform: scale(1) translateY(-340px) translatex(-92px) rotate(10deg);
   right: -15%;
 }
 
-.player-position{
+.player-position {
   position: absolute;
-  top: 50px;
   right: 0;
 }
 
-.btn-add{
+.btn-add {
   position: absolute;
   right: 32px;
   bottom: 32px;
@@ -63,5 +64,41 @@
   }
   100% {
     transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
+  }
+}
+
+
+
+// --- Responsive ---
+@media (max-width: 430px) {
+  .pick-card {
+    border: none !important;
+    animation: pick-card-animation-responsive 1.5s ease-in-out;
+    transform: scale(1) translateY(-340px);
+  }
+
+  .played-card {
+    border: none !important;
+    transform: scale(1) translateY(-340px) translatex(-12px);
+    right: -15%;
+  }
+
+  .player-position{
+ 
+  }
+
+  @keyframes pick-card-animation-responsive {
+    0% {
+      transform: scale(1.05) translateY(-7px) translatex(-5px);
+    }
+    30% {
+      transform: scale(1.25);
+    }
+    55% {
+      transform: scale(1) translateY(-340px);
+    }
+    100% {
+      transform: scale(1) translateY(-340px);
+    }
   }
 }
