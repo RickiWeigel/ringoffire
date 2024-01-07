@@ -8,6 +8,7 @@
   height: clamp(30px, 7vw, 50px);
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50px;
+  filter: brightness(0.6);
   > span {
     color: rgb(128, 48, 48);
     font-size: clamp(16px, 3vw, 24px);
@@ -15,8 +16,8 @@
   }
 }
 
-.active-player {
-  filter: brightness(1.5);
+.player-active {
+  filter: brightness(1.2);
 }
 
 // --- Responsive ---
