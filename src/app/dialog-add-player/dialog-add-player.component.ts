@@ -8,7 +8,9 @@ import {
   MatDialogTitle,
   MatDialogContent,
   MatDialogActions,
+  MatDialogRef,
 } from '@angular/material/dialog';
+import { GameComponent } from '../game/game.component';
 
 @Component({
   selector: 'app-dialog-add-player',
@@ -29,7 +31,11 @@ import {
 export class DialogAddPlayerComponent {
   name: string = '';
 
-  constructor(){
+  constructor(public dialogRef: MatDialogRef<GameComponent>){
 
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }
