@@ -11,6 +11,7 @@
 
 .card-stack {
   position: relative;
+  top: -80px;
   right: -15%;
   > img {
     position: absolute;
@@ -32,12 +33,12 @@
 .pick-card {
   border: none !important;
   animation: pick-card-animation 1.5s ease-in-out;
-  transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
+  transform: scale(1) translateY(-300px) translatex(-80px) rotate(10deg);
 }
 
 .played-card {
   border: none !important;
-  transform: scale(1) translateY(-340px) translatex(-92px) rotate(10deg);
+  transform: scale(1) translateY(-300px) translatex(-92px) rotate(10deg);
   right: -15%;
 }
 
@@ -48,8 +49,15 @@
 
 .btn-add {
   position: absolute;
-  right: 32px;
-  bottom: 32px;
+  right: 22px;
+  bottom: 30px;
+}
+
+.game-info{
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  right: 100px;
 }
 
 @keyframes pick-card-animation {
@@ -60,10 +68,10 @@
     transform: scale(1.25);
   }
   55% {
-    transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
+    transform: scale(1) translateY(-300px) translatex(-80px) rotate(10deg);
   }
   100% {
-    transform: scale(1) translateY(-340px) translatex(-80px) rotate(10deg);
+    transform: scale(1) translateY(-300px) translatex(-80px) rotate(10deg);
   }
 }
 
@@ -74,12 +82,12 @@
   .pick-card {
     border: none !important;
     animation: pick-card-animation-responsive 1.5s ease-in-out;
-    transform: scale(1) translateY(-340px);
+    transform: scale(1) translateY(-300px);
   }
 
   .played-card {
     border: none !important;
-    transform: scale(1) translateY(-340px) translatex(-12px);
+    transform: scale(1) translateY(-300px) translatex(-12px);
     right: -15%;
   }
 
@@ -91,10 +99,10 @@
       transform: scale(1.25);
     }
     55% {
-      transform: scale(1) translateY(-340px);
+      transform: scale(1) translateY(-300px);
     }
     100% {
-      transform: scale(1) translateY(-340px);
+      transform: scale(1) translateY(-300px);
     }
   }
 }

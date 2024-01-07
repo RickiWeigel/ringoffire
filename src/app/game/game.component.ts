@@ -9,20 +9,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { GameInfoComponent } from "../game-info/game-info.component";
 
 @Component({
-  selector: 'app-game',
-  standalone: true,
-  imports: [
-    NgForOf,
-    NgStyle,
-    NgIf,
-    PlayerComponent,
-    MatButtonModule,
-    MatIconModule,
-  ],
-  templateUrl: './game.component.html',
-  styleUrl: './game.component.scss',
+    selector: 'app-game',
+    standalone: true,
+    templateUrl: './game.component.html',
+    styleUrl: './game.component.scss',
+    imports: [
+        NgForOf,
+        NgStyle,
+        NgIf,
+        PlayerComponent,
+        MatButtonModule,
+        MatIconModule,
+        GameInfoComponent
+    ]
 })
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
