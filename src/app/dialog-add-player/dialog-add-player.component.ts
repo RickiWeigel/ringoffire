@@ -31,7 +31,7 @@ import { GameComponent } from '../game/game.component';
 export class DialogAddPlayerComponent {
   name: string = '';
 
-  constructor(public dialogRef: MatDialogRef<GameComponent>){
+  constructor(private dialogRef: MatDialogRef<DialogAddPlayerComponent>){
 
   }
 

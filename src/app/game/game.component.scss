@@ -33,12 +33,12 @@
 .pick-card {
   border: none !important;
   animation: pick-card-animation 1.5s ease-in-out;
-  transform: scale(1) translateY(-300px) translatex(-80px) rotate(10deg);
+  transform: scale(1) translateY(-330px) translatex(-80px) rotate(10deg);
 }
 
 .played-card {
   border: none !important;
-  transform: scale(1) translateY(-300px) translatex(-92px) rotate(10deg);
+  transform: scale(1) translateY(-330px) translatex(-92px) rotate(10deg);
   right: -15%;
 }
 
@@ -68,10 +68,10 @@
     transform: scale(1.25);
   }
   55% {
-    transform: scale(1) translateY(-300px) translatex(-80px) rotate(10deg);
+    transform: scale(1) translateY(-330px) translatex(-80px) rotate(10deg);
   }
   100% {
-    transform: scale(1) translateY(-300px) translatex(-80px) rotate(10deg);
+    transform: scale(1) translateY(-330px) translatex(-80px) rotate(10deg);
   }
 }
 
@@ -82,12 +82,12 @@
   .pick-card {
     border: none !important;
     animation: pick-card-animation-responsive 1.5s ease-in-out;
-    transform: scale(1) translateY(-300px);
+    transform: scale(1) translateY(-330px);
   }
 
   .played-card {
     border: none !important;
-    transform: scale(1) translateY(-300px) translatex(-12px);
+    transform: scale(1) translateY(-330px) translatex(-12px);
     right: -15%;
   }
 
@@ -99,10 +99,10 @@
       transform: scale(1.25);
     }
     55% {
-      transform: scale(1) translateY(-300px);
+      transform: scale(1) translateY(-330px);
     }
     100% {
-      transform: scale(1) translateY(-300px);
+      transform: scale(1) translateY(-330px);
     }
   }
 }

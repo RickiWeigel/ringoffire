@@ -38,7 +38,7 @@ export class GameInfoComponent implements OnInit, OnChanges {
       description:
         'Pick a mate. Your mate must always drink when you drink and the other way around.',
     },
-    { title: 'Thumbmaster', description: '' },
+    { title: 'Thumbmaster', description: 'When you put your thumb on the table everyone must follow and whomever is last must drink. You are the thumb master till someone else picks a five.' },
     { title: 'Men', description: 'All men drink.' },
     { title: 'Quizmaster', description: '' },
     {
@@ -59,9 +59,16 @@ export class GameInfoComponent implements OnInit, OnChanges {
   title:string = '';
   description:string = '';
 
-  @Input()card!: string;
+  @Input() card!: any;
+
 
   ngOnChanges(): void{
-    
+    if (this.card) {
+
+      let cardNumberPng = this.card.split('_')[1];
+      let cardNumber = +cardNumberPng.split('.')[0];
+      this.title = this.cardAction[cardNumber -1].title;
+      this.description = this.cardAction[cardNumber -1].description;
+    }
   }
 }
