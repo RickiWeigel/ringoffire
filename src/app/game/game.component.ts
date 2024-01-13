@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { GameInfoComponent } from '../game-info/game-info.component';
+import { ActivatedRoute } from '@angular/router';
+import { RingoffireService } from '../firebase-services/ringoffire.service';
 
 @Component({
   selector: 'app-game',
@@ -31,10 +33,18 @@ export class GameComponent implements OnInit {
   game!: Game;
   currentCard!: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    private route: ActivatedRoute,
+    public dialog: MatDialog,
+    public ringoffireService: RingoffireService
+  ) {}
 
   ngOnInit(): void {
     this.newGame();
+    this.route.params.subscribe((params) => {
+      console.log(params['id']);
+
+    });
   }
 
   newGame() {
@@ -47,7 +57,8 @@ export class GameComponent implements OnInit {
       this.pickCardAnimation = true;
 
       this.game.currentPlayer++;
-      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+      this.game.currentPlayer =
+        this.game.currentPlayer % this.game.players.length;
 
       setTimeout(() => {
         this.game.playedCards.push(this.currentCard);

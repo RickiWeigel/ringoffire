@@ -10,7 +10,6 @@ import {
   MatDialogActions,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { GameComponent } from '../game/game.component';
 
 @Component({
   selector: 'app-dialog-add-player',
